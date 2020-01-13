@@ -16,25 +16,22 @@ client = pymongo.MongoClient(conn)
 # set database (used this first time to create db)
 db=client.mars_db
 
-# drop the data if already there so it doesn't append
-db.mars_results.drop()
+# This route will query the Mongo database and get the mars result
+# and then render them to the html file
 
-# db.mars_results.drop()
-
-# Render the index.html page with any craigslist listings in our database. 
-# If there are no listings, the table will be empty.
 @app.route("/")
 def home():
-    return(f"Welcoming to Jeff's Scraping Application<br/><br/>"
-        f"Please Visit /scrape to Begin Scraping<br/><br/>"
-        f"After Scraping is Complete, You Will Be Returned to This Page")
-    # listing_results = listings.find()
-    # return render_template("index.html", listing_results=listing_results)
+    
+    mars_results = db.mars_results.find()
+    return render_template("index.html", mars_results=mars_results)
 
-# This route will trigger the webscraping, but it will then send us back to the index route to render the results
+# This route will trigger the webscraping, but it will then send us 
+# back to the index route to render the results
+
 @app.route("/scrape")
 def scraper():
-    
+# drop any data that is already in database
+    db.mars_results.drop()
     mars_data = scrape_mars.scrape()
     
     db.mars_results.insert_one(mars_data)

@@ -228,11 +228,11 @@ def scrape():
 
     browser.visit(mars_hemispheres_url)
 
-    # click on the link for the Cerberus hemisphere
+    # click on the link for the Valles hemisphere
 
     browser.click_link_by_partial_text('Valles')
 
-    # click on the link for the Cerberus hemisphere
+    # click on the link for the Valles hemisphere
 
     browser.click_link_by_partial_text('Open')
 
@@ -257,17 +257,20 @@ def scrape():
         {"title": "Syrtis Major Hemisphere", "img_url": syrtis_url}
     ]
 
-
+    # I know I didn't do a good job of defining this dictionary.  My orginal definition didn't
+    # allow me to use the rendered data correctly in my html app.  I didn a quick fix to get
+    # it too work, but ran out of time to figure out a better way to set it up
+    
     mars_dict = {
-        'latesthedline': news_title,
+        'latestheadline': news_title,
         'latestparagraph':  news_paragraph,
         'featuredimage': featured_image_url,
         'currentweather': mars_weather,
         'factstable': mars_facts_html,
-        "title": "Valles Marineris Hemisphere", "img_url": valles_url,
-        "title": "Cerberus Hemisphere", "img_url": cerberus_url,
-        "title": "Schiaparelli Marineris Hemisphere", "img_url": schiap_url,
-        "title": "Syrtis Major Hemisphere", "img_url": syrtis_url 
+        "va_title": "Valles Marineris Hemisphere", "va_img_url": valles_url,
+        "ce_title": "Cerberus Hemisphere", "ce_img_url": cerberus_url,
+        "sc_title": "Schiaparelli Marineris Hemisphere", "sc_img_url": schiap_url,
+        "sy_title": "Syrtis Major Hemisphere", "sy_img_url": syrtis_url 
         }
 
     # print(mars_dictionary)
