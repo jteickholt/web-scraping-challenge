@@ -6,7 +6,7 @@
 
 2. scrape_mars.py:  This contains the notebook code converted to a py script and the code put into scrape function
 
-3. Screenshots_Mongo_And_App:  I took a screen shot of the Mongo db I created. I also took screen shots of the app/webpage
+3. Screenshots_Mongo_And_App:  I took a screen shot of the Mongo db I created. I also took screen shots of the app/webpage after running.
 
 4. Also includes chrome driver executable and some log file that created (I am not sure by what)
 
