@@ -8,7 +8,7 @@
 
 3. Screenshots_Mongo_And_App:  I took a screen shot of the Mongo db I created. I also took screen shots of the app/webpage after running.
 
-4. Also includes chrome driver executable and some log file that created (I am not sure by what)
+4. Also includes chrome driver executable and some log files that were created (I am not sure by what, I guess chromedriver)
 
 #### Sub-folders
 
