@@ -10,8 +10,6 @@
 
 4. Also includes chrome driver executable and some log files that were created (I am not sure by what, I guess chromedriver)
 
-#### Sub-folders
-
-### templates contains the following:
+#### templates sub-folder contains:
 
 1. index.html: html code using the rendered data 
